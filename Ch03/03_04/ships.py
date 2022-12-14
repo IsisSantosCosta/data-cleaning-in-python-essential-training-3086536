@@ -11,7 +11,7 @@ schema = pa.DataFrameSchema({
     'name': pa.Column(pa.String),
     'lat': pa.Column(
         pa.Float,
-        nullable=True,
+        nullable=False,
         checks=pa.Check(
             lambda v: v >= -90 and v <= 90,
             element_wise=True,
@@ -19,7 +19,7 @@ schema = pa.DataFrameSchema({
     ),
     'lng': pa.Column(
         pa.Float,
-        nullable=True,
+        nullable=False,
         checks=pa.Check(
             lambda v: v >= -180 and v <= 180,
             element_wise=True,
@@ -28,3 +28,4 @@ schema = pa.DataFrameSchema({
 })
 
 schema.validate(df)
+# %%
