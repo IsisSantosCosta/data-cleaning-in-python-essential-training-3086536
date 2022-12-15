@@ -5,11 +5,17 @@ df = pd.read_csv('points.csv')
 df.dtypes
 
 # %%
+df
+
+# %%
 def asint(val):
     return int(val, base=0)
 
 df['color'] = df['color'].apply(asint)
 df.dtypes
+
+# %%
+df
 
 # %%
 bools = {
@@ -21,3 +27,4 @@ df.dtypes
 
 # %%
 df
+# %%

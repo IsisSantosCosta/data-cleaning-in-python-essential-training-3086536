@@ -19,6 +19,15 @@ df['date'].fillna(method='ffill', inplace=True)
 df
 
 # %%
+df['price'].dropna()
+prices = df.dropna(subset=['price']).groupby('name').mean()['price']
+prices
+# df.groupby(['name']).mean()['price']
+
+# %%
+df.merge(prices, how='left')
+
+# %%
 import numpy as np
 prices = df.groupby('name')['price'].transform(np.mean)
 prices
