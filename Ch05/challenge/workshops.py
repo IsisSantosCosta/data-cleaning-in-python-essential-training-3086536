@@ -97,4 +97,8 @@ df
 pd.DataFrame(df.groupby('topic').mean()['earnings'])
 
 # %% EARNINGS BY YEAR_MONTH
+year_month = df['start'].astype('str').apply(lambda x: x[0:7])
 year_month
+
+# %%
+pd.DataFrame(df.groupby(year_month).mean()['earnings'])
