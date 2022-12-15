@@ -13,6 +13,11 @@ df
 # %%
 df = pd.read_csv('donations.csv')
 df
+
+
+# %%
+df.col 
+
 # %%
 import re
 
@@ -27,6 +32,7 @@ def fix_col(col):
         .lower()
         .replace(' ', '_')
     )
+
 
 df.rename(columns=fix_col, inplace=True)
 df
