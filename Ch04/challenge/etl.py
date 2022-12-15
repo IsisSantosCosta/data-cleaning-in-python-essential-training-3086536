@@ -10,3 +10,7 @@ Drop and report invalid rows.
 
 Report the percentage of bad rows. Fail the ETL if there are more than 5% bad rows
 """
+
+import pandas as pd
+import sqlite3
+

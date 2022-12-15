@@ -56,4 +56,7 @@ nd
 
 # %%
 errors = pd.concat([mv, ip, nd])
-errors.sort_values('row')
+errors.sort_values('row', inplace=True)
+errors.set_index('row')
+
+# %%

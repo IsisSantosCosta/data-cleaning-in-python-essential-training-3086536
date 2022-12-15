@@ -27,5 +27,9 @@ df.to_parquet(out_file, schema=schema)
 pd.read_parquet(out_file)
 
 # %%
+df.dtypes
 df['time'] = df['time'].astype(str)
+df.dtypes
+
+# %%
 df.to_parquet(out_file, schema=schema)

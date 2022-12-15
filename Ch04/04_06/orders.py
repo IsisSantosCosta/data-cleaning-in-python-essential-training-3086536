@@ -19,6 +19,7 @@ def is_valid_row(row):
 
 
 ok_df = df[df.apply(is_valid_row, axis=1)]
+ok_df
 
 # %%
 num_bad = len(df) - len(ok_df)
@@ -28,3 +29,4 @@ if num_bad > 0:
     bad_rows = df[~df.index.isin(ok_df.index)]
     print('bad rows:')
     print(bad_rows)
+# %%
